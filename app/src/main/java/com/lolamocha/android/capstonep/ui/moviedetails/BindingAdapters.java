@@ -72,9 +72,13 @@ public class BindingAdapters {
         for (Genre genre : genres) {
             Chip chip = new Chip(context);
             chip.setText(genre.getName());
+
+            chip.setTextColor(ColorStateList.valueOf(
+                    context.getResources().getColor(R.color.md_orange_400)));
+
             chip.setChipStrokeWidth(UiUtils.dipToPixels(context, 1));
             chip.setChipStrokeColor(ColorStateList.valueOf(
-                    context.getResources().getColor(R.color.md_blue_grey_200)));
+                    context.getResources().getColor(R.color.md_orange_400)));
             chip.setChipBackgroundColorResource(android.R.color.transparent);
             view.addView(chip);
         }
